@@ -1,0 +1,68 @@
+.anwg-popup-layout {
+  border-radius: 16px;
+
+  * {
+    font-family: 'Inter', sans-serif;
+  }
+
+  width: 360px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    color: var(--additional-white, #FFF);
+
+    background-color: var(--primary-600-base);
+
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    &__settings-icon {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    &__switch {
+      &[aria-checked="false"] {
+        background-color: var(--additional-white, #FFF);
+
+        .ant-switch-handle::before { background-color: var(--secondary-algal-fuel-500-base); }
+      }
+
+      &.ant-switch-checked {
+        background-color: var(--secondary-algal-fuel-500-base);
+  
+        .ant-switch-handle::before { background-color: var(--additional-white, #FFF); }
+      }
+    }
+  }
+
+  &__body {
+    padding: 24px;
+    background-color: var(--greyscale-50, #F8FAFC);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

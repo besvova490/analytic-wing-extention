@@ -1,0 +1,10 @@
+serviceWorker.js
+config/
+scripts/
+build/
+jest.config.js
+.scannerwork
+dist/
+node_modules/
+configs/
+.eslintrc.js

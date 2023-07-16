@@ -1,0 +1,48 @@
+{
+  "name": "analytic-wing-extention",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --watch --progress --config ./configs/webpack.dev.js",
+    "build": "webpack --progress --config ./configs/webpack.prod.js",
+    "lint": "eslint --fix --quiet ./",
+    "lint:ci": "eslint -f json -o eslint-report.json ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^5.7.0",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dev-utils": "^12.0.1",
+    "react-icons": "^4.10.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/eslint-parser": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@coax/eslint-config-fe-react": "^1.0.0",
+    "babel-loader": "^9.1.3",
+    "babel-preset-react-app": "^10.0.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.45.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.32.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "react-dom": "^18.2.0",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.9.0"
+  }
+}

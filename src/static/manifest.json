@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Analytic Wing",
+  "version": "0.0.1",
+  "description": "Analytic Wing is a chrome extension that helps you check the analytics of your website.",
+  "icons": {
+    "16": "app-logo.png",
+    "48": "app-logo.png",
+    "128": "app-logo.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Analytic Wing",
+    "default_icon": {
+      "16": "app-logo.png",
+      "24": "app-logo.png",
+      "32": "app-logo.png"
+    }
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": ["storage", "contextMenus"]
+}
