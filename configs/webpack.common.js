@@ -19,21 +19,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-      },
-      {
-        type: 'asset/resource',
-        test: /\.(png|jpg|jpeg|woff|woff2|eot|ttf|otf)$/i,
-      },
-      {
         oneOf: [
+          {
+            type: 'asset/resource',
+            test: /\.(png|jpg|jpeg|woff|woff2|eot|ttf|otf)$/i,
+          },
           {
             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
             type: 'asset/resource',
             generator: {
               filename: 'static/media/[name].[hash:8].[ext]'
             }
+          },
+          {
+            test: /\.s[ac]ss$/i,
+            issuer: (issuer) => (/contentScript\/index\.js$/.test(issuer)),
+            use: ['style-loader', 'css-loader', 'sass-loader'],
+          },
+          {
+            test: /\.s[ac]ss$/i,
+            issuer: (issuer) => !(/contentScript\/index\.js$/.test(issuer)),
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
           },
           {
             test: /\.(js|mjs|jsx|ts|tsx)$/,
@@ -52,9 +58,9 @@ module.exports = {
               // compact: isEnvProduction,
             },
           },
-        ]
-      }
-  ],
+        ],
+      },
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({

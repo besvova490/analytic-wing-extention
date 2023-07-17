@@ -1,8 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { MemoryRouter } from "react-router-dom";
 
 // components
-import Popup from "./Popup";
+import Router from "./pages/Router";
 
 // assets
 import "../assets/styles/index.scss";
@@ -12,4 +13,8 @@ rootDiw.classList.add("root");
 document.body.appendChild(rootDiw);
 
 const root = createRoot(rootDiw);
-root.render(<Popup />);
+root.render(
+  <MemoryRouter>
+    <Router />
+  </MemoryRouter>
+);

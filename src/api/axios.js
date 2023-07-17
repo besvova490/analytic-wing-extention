@@ -9,7 +9,6 @@ const client = axios.create({
 });
 
 client.interceptors.request.use(async (config) => {
-  console.log("config", config);
   const webApp = await getStorageItem("webApp");
 
   if (webApp.token) {

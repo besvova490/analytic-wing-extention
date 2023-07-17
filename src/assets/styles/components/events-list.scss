@@ -1,0 +1,49 @@
+.anwg-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.anwg-events-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    &__item {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      
+      cursor: pointer;
+    }
+  }
+
+  code {
+    font-family: monospace;
+    font-size: inherit;
+    background-color: #272822;
+    color: #f8f8f2;
+    
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Code in text */
+  p > code,
+  li > code,
+  dd > code,
+  td > code {
+    background: #ffeff0;
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: .1rem .3rem .2rem;
+    border-radius: .2rem;
+  }
+}

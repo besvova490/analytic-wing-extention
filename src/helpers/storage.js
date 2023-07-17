@@ -1,7 +1,9 @@
 export const INITIAL_STORAGE = {
   userToken: null,
+  analytics: {},
   webApp: { url: null, token: null },
   isAnalyticsBadgeEnabled: false,
+  events: [],
 };
 
 export const setStorage = (data) => {
@@ -12,7 +14,9 @@ export const setStorage = (data) => {
 
 export const setStorageItem = (key, value) => {
   return new Promise((resolve) => {
-    chrome.storage.sync.set({ [key]: value }, resolve);
+    chrome.storage.sync.set({ [key]: value }, e => {
+      resolve(e);
+    });
   });
 };
 

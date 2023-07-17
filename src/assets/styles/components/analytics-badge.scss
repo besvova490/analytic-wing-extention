@@ -1,0 +1,24 @@
+.anwg-analytics-badge-wrapper {
+  box-sizing: border-box;
+
+  width: 100%;
+  padding: 0 24px;
+
+  * {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.anwg-analytics-badge {
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  background-color: var(--greyscale-50, #F8FAFC);
+
+  .anwg-overview-simple-card { padding: 12px 8px; }
+}

@@ -1,18 +1,25 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Input, Button, Form, Checkbox } from "antd";
 
 // hooks
-import useStorage from "../../hooks/useStorage";
+import { useStorage } from "../../context/StorageContext";
 
 
 function AuthForm() {
   const [_, updateStorage] = useStorage();
+  const navigate = useNavigate();
 
   const handleSubmit = (data) => {
     if (data.isWebApp) {
-      updateStorage("webApp", { url: data.webAppUrl, token: data.webAppToken });
+      updateStorage("webApp", { url: data.webAppUrl, token: data.webAppToken })
+        .then(() => navigate("/"));
+
+      return;
     }
+
+    updateStorage("userToken", data.userToken).then(() => navigate("/"));
   };
   
   return (

@@ -1,19 +1,13 @@
 import React from "react";
-import { Empty, Skeleton, Alert } from "antd";
+import { Skeleton, Alert } from "antd";
 import PropTypes from "prop-types";
 
 // components
-import AuthForm from "../containers/Forms/AuthForm";
-import OverviewSimpleCard from "../components/OverviewSimpleCard";
+import OverviewSimpleCard from "../../../../components/OverviewSimpleCard";
 
 
-function PopupContent({ isEmpty, isLoading, error, data }) {
+function PopupContent({ isLoading, error, data }) {
   switch (true) {
-    case isEmpty:
-      return (<>
-        <Empty description="Please proved user/web app token to see analytics info"/>
-        <AuthForm/>
-      </>);
     case isLoading:
       return <Skeleton active/>;
     case !!error:
@@ -22,19 +16,19 @@ function PopupContent({ isEmpty, isLoading, error, data }) {
       return (<>
         <OverviewSimpleCard
           label="Views"
-          value={data?.groupedByEvent.page_view || "-"}
+          value={data.groupedByEvent?.page_view || "-"}
         />
         <OverviewSimpleCard
           label="Clicks"
-          value={data?.groupedByEvent.click || "-"}
+          value={data?.groupedByEvent?.click || "-"}
         />
         <OverviewSimpleCard
           label="Desktop"
-          value={data?.groupedByDevise.desktop || "-"}
+          value={data?.groupedByDevise?.desktop || "-"}
         />
         <OverviewSimpleCard
           label="Mobile"
-          value={data?.groupedByDevise.mobile || "-"}
+          value={data?.groupedByDevise?.mobile || "-"}
         />
       </>);
     default:
