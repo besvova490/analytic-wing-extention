@@ -7,7 +7,8 @@
     "dev": "webpack --watch --progress --config ./configs/webpack.dev.js",
     "build": "webpack --progress --config ./configs/webpack.prod.js",
     "lint": "eslint --fix --quiet ./",
-    "lint:ci": "eslint -f json -o eslint-report.json ./"
+    "lint:ci": "eslint -f json -o eslint-report.json ./",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
