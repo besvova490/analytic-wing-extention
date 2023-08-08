@@ -19,6 +19,7 @@ function OptionsPageLayout({ children }) {
             className="anwg-popup-layout__header__settings-icon"
             onClick={() => chrome.runtime.openOptionsPage()}
           />
+          {/* Add any additional modifications to the header section */}
         </div>
       </div>
       <div className="anwg-popup-layout__body options-page-layout__body">
