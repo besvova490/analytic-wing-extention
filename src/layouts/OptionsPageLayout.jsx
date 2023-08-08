@@ -14,13 +14,7 @@ function OptionsPageLayout({ children }) {
             Analytic Wing
           </h2>
         </div>
-        <div className="anwg-popup-layout__header__right">
-          <IoIosSettings
-            className="anwg-popup-layout__header__settings-icon"
-            onClick={() => chrome.runtime.openOptionsPage()}
-          />
-          {/* Add any additional modifications to the header section */}
-        </div>
+        {/* Add any additional modifications to the header section */}
       </div>
       <div className="anwg-popup-layout__body options-page-layout__body">
         { children }
