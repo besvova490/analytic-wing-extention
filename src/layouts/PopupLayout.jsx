@@ -7,7 +7,6 @@ import { useNavigate, Link } from "react-router-dom";
 
 // components
 import LogoWhite from "../components/icons/LogoWhite";
-import OptionsForm from "../containers/Forms/OptionsForm";
 
 // hooks
 import { useStorage } from "../context/StorageContext";
@@ -74,7 +73,6 @@ function PopupLayout({ children }) {
         </div>
       </div>
       <div className="anwg-popup-layout__body">
-        <OptionsForm />
         { children }
       </div>
       <div
