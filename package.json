@@ -44,6 +44,10 @@
     "style-loader": "^3.3.3",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
-    "webpack-merge": "^5.9.0"
+    "webpack-merge": "^5.9.0",
+    "jest": "^27.4.7",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "identity-obj-proxy": "^4.2.11"
   }
 }
