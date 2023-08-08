@@ -1,8 +1,14 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import OptionsForm from "../containers/Forms/OptionsForm";
 
 const OptionsPage = () => {
-  return <div>OptionsPage</div>;
+  return (
+    <div>
+      <OptionsForm />
+      OptionsPage
+    </div>
+  );
 };
 
 const rootDiw = document.createElement("div");
