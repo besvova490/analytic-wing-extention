@@ -1,6 +1,7 @@
 import React from 'react';
 import { IoIosSettings } from "react-icons/io";
 import LogoWhite from "../components/icons/LogoWhite";
+import './assets/styles/layouts/options-page-layout.scss';
 
 function OptionsPageLayout({ children }) {
   return (
