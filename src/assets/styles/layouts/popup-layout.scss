@@ -62,7 +62,8 @@
     }
   }
 
-  &__body {
+  &__body,
+  .options-page-layout__body {
     padding: 24px;
     background-color: var(--greyscale-50, #F8FAFC);
 
